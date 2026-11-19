@@ -311,10 +311,10 @@ __int64 hkUpdateAccessoryOnUnpause(NieR::PlayerModelInfo* pPlayerModelInfo)
 			accessory = result;
 			if (result != 0)
 			{
-				__int64 rcx_6 = *(__int64*)((char*)pPlayerModelInfo + 0x610);
-				if (rcx_6 != 0)
+				__int64 pInfo = *(__int64*)((char*)pPlayerModelInfo + 0x610);
+				if (pInfo != 0)
 				{
-					*(int*)(accessory + 0x830) = *NieR::sub_745c10(rcx_6);
+					*(int*)(accessory + 0x830) = *NieR::sub_745c10(pInfo);
 					int rax_7 = *(int*)(accessory + 0x5b8) - 0x4E003;
 					LONG base = 0x30D;
 					if (rax_7 > 9 || !_bittest(&base, rax_7))
